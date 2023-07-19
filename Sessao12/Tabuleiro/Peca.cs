@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tabuleiro;
+using Sessao12.Tabuleiro;
 
-namespace Tabuleiro
+namespace Sessao12.Tabuleiro
 {
-    internal class Part
+    internal class Peca
     {
         public Posicao Posicao { get; set; }
         public Color Color { get; protected set; }
         public int QtdMovimentos { get; protected set; }
         public Tabuleiro Tabuleiro { get; set; }
 
-        public Part(Posicao posicao, Color color, Tabuleiro tabuleiro)
+        public Peca(Color color, Tabuleiro tabuleiro)
         {
-            Posicao = posicao;
+            Posicao = null;
             Color = color;
             Tabuleiro = tabuleiro;
             QtdMovimentos = 0;

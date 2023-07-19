@@ -1,6 +1,6 @@
 ﻿
 
-namespace Tabuleiro
+namespace Sessao12.Tabuleiro
 {
     internal class Posicao
     {

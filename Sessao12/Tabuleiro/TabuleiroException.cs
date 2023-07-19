@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sessao12.Tabuleiro
 {
-    internal enum Color
+    internal class TabuleiroException : ApplicationException
     {
-        White,
-        Black,
-        Yellow,
-        Red,
-        Green,
+        public TabuleiroException(string message) : base(message) { }
     }
 }
