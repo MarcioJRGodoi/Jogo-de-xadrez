@@ -5,14 +5,24 @@ class Program
 {
     static void Main(string[] args)
     {
-        Tabuleiro.Tabuleiro tab = new Tabuleiro.Tabuleiro(8,8);
-        try { 
-        tab.ColocarPeca(new Torre(Color.Black, tab), new Posicao(0, 3));
-        tab.ColocarPeca(new Torre(Color.Black, tab), new Posicao(1, 3));
-        tab.ColocarPeca(new Rei(Color.Black, tab), new Posicao(2, 0));
+        try
+        {
+            PartidaDeXadrez partida = new PartidaDeXadrez();
 
-        Tela.ImprimirTabuleiro(tab);
-        }catch(TabuleiroException e)
+            while (!partida.Terminada)
+            {
+                Console.Clear();
+                Tela.ImprimirTabuleiro(partida.Tab);
+                Console.WriteLine();
+                Console.Write("Origem: ");
+                Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
+                Console.Write("Destino: ");
+                Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
+
+                partida.ExeutaMovimento(origem, destino);
+            }
+        }
+        catch (TabuleiroException e)
         {
             Console.WriteLine(e.Message);
         }

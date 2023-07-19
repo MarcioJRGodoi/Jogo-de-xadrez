@@ -45,6 +45,17 @@ namespace Sessao12.Tabuleiro
             Pecas[pos.Linha, pos.Coluna] = p;
             p.Posicao = pos;
         }
+        public Peca RetiraPeca(Posicao pos)
+        {
+            if(Peca(pos) == null)
+            {
+                return null;
+            }
+            Peca axu = Peca(pos);
+            axu.Posicao = null;
+            Pecas[pos.Linha, pos.Coluna] = null;
+            return axu;
+        }
 
         public bool PosicaoValida(Posicao pos)
         {
