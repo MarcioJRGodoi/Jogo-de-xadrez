@@ -1,6 +1,4 @@
-﻿
-
-using Tabuleiro;
+﻿using Tabuleiro;
 
 namespace Sessao12
 {
@@ -8,9 +6,9 @@ namespace Sessao12
     {
         static void Main(string[] args)
         {
-            Posicao p = new Posicao(3 , 4);
+            Tabuleiro.Tabuleiro tab = new Tabuleiro.Tabuleiro(8,8);
 
-            Console.WriteLine("Posicao " + p);
+            Tela.ImprimirTabuleiro(tab);
         }
     }
 }
