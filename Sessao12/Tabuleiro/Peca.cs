@@ -7,7 +7,7 @@ using Sessao12.Tabuleiro;
 
 namespace Sessao12.Tabuleiro
 {
-    internal class Peca
+    internal abstract class Peca
     {
         public Posicao Posicao { get; set; }
         public Color Color { get; protected set; }
@@ -26,5 +26,8 @@ namespace Sessao12.Tabuleiro
         {
             QtdMovimentos++;
         }
+
+        public abstract bool[,] MovimentosPossiveis();
+        
     }
 }

@@ -35,6 +35,9 @@ namespace Sessao12.Xadrez
         private void ColocarPecas()
         {
             Tab.ColocarPeca(new Torre(Color.White, Tab), new PosicaoXadrez(1, 'c').ToPosicao());
+            Tab.ColocarPeca(new Torre(Color.White, Tab), new PosicaoXadrez(2, 'c').ToPosicao());
+
+            Tab.ColocarPeca(new Torre(Color.Black, Tab), new PosicaoXadrez(8, 'c').ToPosicao());
 
         }
     }
