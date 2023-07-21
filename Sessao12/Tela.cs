@@ -69,7 +69,7 @@ namespace Sessao12
             }
             else
             {
-                if (peca.Color == Color.White)
+                if (peca.Color == Color.Branco)
                 {
                     Console.Write(peca);
                 }

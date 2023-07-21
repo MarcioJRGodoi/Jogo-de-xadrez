@@ -8,8 +8,8 @@ namespace Sessao12.Tabuleiro
 {
     internal enum Color
     {
-        White,
-        Black,
+        Branco,
+        Preto,
         Yellow,
         Red,
         Green,
