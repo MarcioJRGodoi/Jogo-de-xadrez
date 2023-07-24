@@ -11,6 +11,44 @@ namespace Sessao12
     internal class Tela
     {
 
+        public static void ImprimirPartida(PartidaDeXadrez partida)
+        {
+            ImprimirTabuleiro(partida.Tab);
+            Console.WriteLine();
+            ImprimirPecasCapturadas(partida);
+            Console.WriteLine();
+            Console.WriteLine("Turno: " + partida.Turno);
+            Console.WriteLine("Aguardando Jogada: " + partida.JogadorAtual);
+            if(partida.Xeque == true)
+            {
+                Console.WriteLine("Xeque!");
+            }
+        }
+
+        public static void ImprimirPecasCapturadas(PartidaDeXadrez partida)
+        {
+            Console.WriteLine("Peças captudaras");
+            Console.Write("Brancas: ");
+            ImprimirConjunto(partida.PecasCapturadas(Color.Branco));
+            Console.WriteLine();
+            Console.Write("Pretas: ");
+            ConsoleColor aux = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            ImprimirConjunto(partida.PecasCapturadas(Color.Preto));
+            Console.ForegroundColor = aux;
+            Console.WriteLine();
+        }
+
+        public static void ImprimirConjunto(HashSet<Peca> conjunto)
+        {
+            Console.Write("[");
+            foreach(Peca p in conjunto)
+            {
+                Console.Write(p + " ");
+            }
+            Console.Write("]");
+        }
+
         public static void ImprimirTabuleiro(Tabuleiro.Tabuleiro tab)
         {
             for (int i = 0; i < tab.Linhas; i++)
