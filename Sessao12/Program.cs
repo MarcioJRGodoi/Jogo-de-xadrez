@@ -30,8 +30,8 @@ class Program
                     Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
                     partida.ValidarPosicaoDeDestino(origem, destino);
 
-
                     partida.RealizaJogada(origem, destino);
+
                 }
                 catch (TabuleiroException e)
                 {
@@ -39,6 +39,8 @@ class Program
                     Console.ReadLine();
                 }
             }
+            Console.Clear();
+            Tela.ImprimirPartida(partida);
         }
         catch (TabuleiroException e)
         {
