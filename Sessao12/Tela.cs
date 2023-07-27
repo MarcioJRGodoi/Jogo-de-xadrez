@@ -36,7 +36,7 @@ namespace Sessao12
 
         public static void ImprimirPecasCapturadas(PartidaDeXadrez partida)
         {
-            Console.WriteLine("Peças captudaras");
+            Console.WriteLine("Peças capturadas");
             Console.Write("Brancas: ");
             ImprimirConjunto(partida.PecasCapturadas(Color.Branco));
             Console.WriteLine();
